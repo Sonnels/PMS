@@ -1,0 +1,16 @@
+.title_header {
+    font-weight: bold;
+    font-size: 1.3em;
+    /* font: oblique bold 120% cursive; */
+    color: #3a4147;
+}
+
+.title_header_formulario {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: white;
+}
+
+.swal-wide{
+    width:80% !important;
+}

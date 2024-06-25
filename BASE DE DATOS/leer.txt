@@ -1,0 +1,10 @@
+DATOS DE ACCESO AL SISTEMA
+Correo: admin@gmail.com
+Password: 1234
+-------------
+Correo: recepcionista@gmail.com
+Password: 1234
+Recuerde instalar composer + un servidor local o
+contratar los servicios de un servidor publico.
+
+Si tiene problemas con la instalación, no dude en comunicarse con nosotros.
