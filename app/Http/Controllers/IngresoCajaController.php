@@ -54,7 +54,7 @@ class IngresoCajaController extends Controller
             $hora = $mytime->toTimeString();
             $fecha = $mytime->toDateString();
             $caja = DB::table('caja')->where('montoCierre', null)->first();
-            if ($caja->codCaja != null) {
+            if ($caja && $caja->codCaja != null) {
                 $ingreso = new IngresoCaja;
                 $ingreso->horaIngreso =  $hora;
                 $ingreso->fechaIngreso = $fecha;
@@ -63,8 +63,7 @@ class IngresoCajaController extends Controller
                 $ingreso->importe = $request->get('importe');
                 $ingreso->estado = 'APROBADO';
                 $ingreso->codUsuario = auth()->user()->IdUsuario;
-                $ingreso->metodoPago = $request->get('metodoPago');
-                $ingreso->metodoPago = 'EFECTIVO';
+                $ingreso->metodoPago = $request->get('metodoPago', 'EFECTIVO');
                 $ingreso->codCaja =  $caja -> codCaja;
                 $ingreso->save();
                 return Redirect::to('caja/ingreso')->with(['success' => '¡Satisfactorio!, Ingreso Extra añadido.']);
